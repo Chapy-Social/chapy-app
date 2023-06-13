@@ -37,9 +37,12 @@ const Profile = ({ match }) => {
 
               <div className="px-4">
                 <h4>{profile.name}</h4>
-                <span className="text-muted d-block">
-                  {profile.jobTitle} @ {profile.company}
-                </span>
+                {(profile.jobTitle || profile.company) && (
+                  <span className="text-muted d-block">
+                    {profile.jobTitle} @ {profile.company}
+                  </span>
+                )}
+
                 <span className="text-muted d-block">{profile.location}</span>
                 <span className="text-muted d-block mb-2">{profile.bio}</span>
                 <button
