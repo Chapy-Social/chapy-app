@@ -9,11 +9,9 @@ const LinksList = ({ links }) => {
     <div className="row mx-4">
       {links.map((link) => {
         return (
-          link.isShared && (
-            <div className="col-4" key={link.id}>
-              <LinkCard link={link} />
-            </div>
-          )
+          <div className="col-4" key={link.id}>
+            <LinkCard link={link} />
+          </div>
         );
       })}
     </div>
