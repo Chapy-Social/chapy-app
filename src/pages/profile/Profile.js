@@ -50,7 +50,7 @@ const Profile = ({ match }) => {
                   className="btn btn-primary mb-3"
                   style={{
                     backgroundColor: "#000000",
-                    borderRadius: "20px",
+                    borderRadius: "25px",
                   }}
                 >
                   Save Contact
@@ -60,17 +60,29 @@ const Profile = ({ match }) => {
 
             <LinksList links={links} />
 
-            <a
-              href="https://chapysocial.com"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-light m-3"
-              style={{
-                borderRadius: "20px",
-              }}
-            >
-              Create your own profile
-            </a>
+            <div className="row m-2 align-items-center">
+              <div className="col-6">
+                <img
+                  src="assets/images/other/go-green.png"
+                  className="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div className="col-6">
+                <a
+                  href="https://chapysocial.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-primary"
+                  style={{
+                    borderRadius: "25px",
+                  }}
+                >
+                  Join Chapy
+                </a>
+              </div>
+            </div>
+            <p>© 2023 Chapy by Softchap</p>
           </div>
         </section>
       )}
