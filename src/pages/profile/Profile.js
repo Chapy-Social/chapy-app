@@ -16,8 +16,8 @@ const Profile = ({ match }) => {
 
   const connectHandler = () => {
     var urlString =
-      `${process.env.REACT_APP_API_URL}/v1/profiles/contact-card/` + profile.id;
-    window.open(urlString, "_self");
+      `${process.env.REACT_APP_API_URL}/v1/profile/contact/` + profile.id;
+    window.open(urlString, "_blank");
   };
 
   return (
@@ -60,22 +60,23 @@ const Profile = ({ match }) => {
 
             <LinksList links={links} />
 
-            <div className="row m-2 align-items-center">
-              <div className="col-6">
+            <div className="">
+              <div className="d-flex my-2 align-items-center justify-content-center">
                 <img
                   src="assets/images/other/go-green.png"
                   className="img-fluid"
                   alt=""
+                  style={{ height: "50px", marginRight: "10px" }}
                 />
-              </div>
-              <div className="col-6">
+
                 <a
                   href="https://chapysocial.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="btn btn-primary"
+                  className="btn btn-primary btn-sm"
                   style={{
-                    borderRadius: "25px",
+                    borderRadius: "15px",
+                    marginLeft: "10px",
                   }}
                 >
                   Join Chapy
