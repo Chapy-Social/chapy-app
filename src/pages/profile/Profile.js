@@ -38,13 +38,15 @@ const Profile = ({ match }) => {
               <div className="px-4">
                 <h4>{profile.name}</h4>
                 {(profile.jobTitle || profile.company) && (
-                  <span className="text-muted d-block">
-                    {profile.jobTitle} @ {profile.company}
+                  <span className="d-block">
+                    {profile.jobTitle}
+                    {profile.jobTitle && " @ "}
+                    {profile.company}
                   </span>
                 )}
 
-                <span className="text-muted d-block">{profile.location}</span>
-                <span className="text-muted d-block mb-2">{profile.bio}</span>
+                <span className="d-block">{profile.location}</span>
+                <span className="d-block mb-2">{profile.bio}</span>
                 <button
                   onClick={connectHandler}
                   className="btn btn-primary mb-3"
