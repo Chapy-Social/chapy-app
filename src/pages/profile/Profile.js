@@ -16,7 +16,8 @@ const Profile = ({ match }) => {
 
   const connectHandler = () => {
     var urlString =
-      `${process.env.REACT_APP_API_URL}/v1/profile/contact/` + profile.id;
+      `https://api.chapysocial.com/v1/profile/contact/` + profile.id;
+      // `${process.env.REACT_APP_API_URL}/v1/profile/contact/` + profile.id;
     window.open(urlString, "_blank");
   };
 

@@ -8,6 +8,7 @@ const LinksList = ({ links }) => {
   return (
     <div className="row mx-4">
       {links.map((link) => {
+        {/* console.log(link) */}
         return (
           <div className="col-4" key={link.id}>
             <LinkCard link={link} />

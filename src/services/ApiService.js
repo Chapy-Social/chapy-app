@@ -1,9 +1,10 @@
 // Import Axios and the useRouter hook from Next.js
 import axios from "axios";
-
 export class ApiService {
-  baseURL = process.env.REACT_APP_API_URL;
-
+  // baseURL = process.env.REACT_APP_API_URL;
+  baseURL = 'https://api.chapysocial.com';
+  // baseURL = 'https://api.chapysocial.com';
+  
   constructor() {
     this.instance = axios.create({
       baseURL: `${this.baseURL}`,

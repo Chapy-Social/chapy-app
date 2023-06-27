@@ -12,6 +12,24 @@ class AuthService extends ApiService {
       password,
     });
   }
+
+
+
+    /**
+   * Send Click using unique users based on userID/ProfileId
+   * @param {string} data - The total payload from user end
+   * @param {string} data.userID - The users unique ID
+   * @returns {Promise<Object>} A Promise that resolves to the reset password object
+   */
+  handleClicks(data) {
+    return this.instance.post(`/v1/share/${data.userID}`, {
+      data,
+    });
+  }
+
+
+
+
 }
 
 const authService = new AuthService();
