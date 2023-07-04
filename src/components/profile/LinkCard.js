@@ -26,7 +26,7 @@ const LinkCard = ({ link }) => {
 
   return (
     <a onClick={handleClick} href={ link.isUrl && !link.value.startsWith("http")? "https://" + link.value : link.webBaseURL + link.value } target="_blank"  rel="noreferrer" >
-      <img src={getLinkImageUrl(link)} alt="link" className="card-img-top p-1" />
+      <img src={getLinkImageUrl(link)} alt="link" className="card-img-top p-1 border-radius" />
       <br />
       <p>{link.title}</p>
     </a>

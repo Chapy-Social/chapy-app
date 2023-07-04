@@ -43,3 +43,6 @@ a {
   height: 40px;
   padding: 8.5px 14px;
 }
+.border-radius {
+  border-radius: 50px;
+}
