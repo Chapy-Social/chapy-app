@@ -6,13 +6,14 @@ const LinkCard = ({ link }) => {
   const [error, setError] = React.useState("");
   const [Countclick, setCountclick] = React.useState(1);
   const handleClick = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // handle user profileID
     const ID = link.id
     // handle social media platform
     const platform = e.target.innerText
     // handle user clicks
-    setCountclick(Countclick + 1)
+    setCountclick(Countclick)
+    console.log(Countclick)
     // create json for records
     const payLoad =  {"userID" : ID, platform, 'clicks' : Countclick  }
     try {
@@ -25,7 +26,7 @@ const LinkCard = ({ link }) => {
 
 
   return (
-    <a onClick={handleClick} href={ link.isUrl && !link.value.startsWith("http")? "https://" + link.value : link.webBaseURL + link.value } target="_blank"  rel="noreferrer" >
+    <a onClick={handleClick}  href={ link.isUrl && !link.value.startsWith("http")? "https://" + link.value : link.webBaseURL + link.value } target="_blank"  rel="noreferrer" >
       <img src={getLinkImageUrl(link)} alt="link" className="card-img-top p-1 border-radius" />
       <br />
       <p>{link.title}</p>
